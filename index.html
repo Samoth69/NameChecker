@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </head>
-<body style="background: white;">
-    <h1>Hello World!</h1>
+<body>
+    <!-- <h1>Hello World!</h1>
     <p>
         We are using node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>.
-    </p>
+    </p> -->
+    <div class="container">
+        <div class="input-group input-group-sm my-3">
+            <span class="input-group-text">Chemin</span>
+            <input type="text" class="form-control" placeholder="d:/..." aria-label="Chemin" aria-describedby="Chemin vers un dossier"></input>
+            <button type="button" class="btn btn-secondary" onclick="openFolder()">Open Folder</button>
+        </div>
+        <p class="fs-6">no loaded files</p>
+    </div>
 </body>
 </html>
